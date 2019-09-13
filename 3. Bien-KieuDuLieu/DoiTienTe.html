@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<label>Vật lý</label>
+<input id="diemly" type="text" />
+<label>Hóa học</label>
+<input id="diemhoa" type="text" />
+<label>Sinh học</label>
+<input id="diemsinh" type="text" />
+
+    <input type="button" onclick="TinhTrungBinh();" value="Điểm Trung Bình"/>
+
+    <input type="button" onclick="Tinhtong();" value="Điểm Tổng"/>
+</form>
+    <script>
+        var ly = document.getElementById("diemly");
+        var hoa = document.getElementById("diemhoa");
+        var sinh = document.getElementById("diemsinh");
+        function Tinhtong() {
+            alert(ly.value*1+hoa.value*1+sinh.value*1);
+        }
+        function TinhTrungBinh() {
+            alert((ly.value*1+hoa.value*1+sinh.value*1)/3);
+
+        }
+
+</script>
+
+</body>
+</html>

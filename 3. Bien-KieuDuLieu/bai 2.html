@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Nhập độ C</label>
+    <input id="doC" type="text"/>
+
+    <input type="button" onclick="TinhToan()" value="Tính F"/>
+
+</form>
+<script>
+
+    var giatri = document.getElementById("doC");
+
+    function TinhToan() {
+        alert((((giatri.value * 1) / 5) * 9) + 32);
+
+    }
+</script>
+
+</body>
+</html>

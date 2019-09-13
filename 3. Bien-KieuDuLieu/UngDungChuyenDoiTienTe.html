@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Amount</label>
+    <input id="sotiendoi" type="text"/>
+    <label>From Currency</label>
+    <select id="tienmuondoi">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select>
+    <label>To Currency</label>
+    <select id="tiendoithanh">
+        <option value="VND"> VND</option>
+        <option value="USD">USD</option>
+    </select>
+    <input type="button" onclick="DoiTien()" value="doitienthanh"/>
+    <p id="result"></p>
+</form>
+<script>
+    function DoiTien() {
+        var sotiendoi = document.getElementById("sotiendoi");
+        var tienmuondoi = document.getElementById("tienmuondoi");
+        var tiendoithanh =document.getElementById("tiendoithanh");
+        var result =0;
+        if(tienmuondoi.value === "USD" && tiendoithanh.value==="VND"){
+            result = sotiendoi.value*25;
+        }
+        else if (tienmuondoi.value === "VND" && tiendoithanh.value==="USD"){
+            result = sotiendoi*0.000043;
+        }else {
+
+            result = sotiendoi*1;
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+
+</body>
+</html>
