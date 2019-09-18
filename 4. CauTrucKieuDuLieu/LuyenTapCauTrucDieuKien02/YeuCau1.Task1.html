@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var nameCustomer= prompt("Enter your name");
+    var idCard=prompt("Enter Id Card Customer");
+    var birthdayCustomer=prompt("Enter birthday Customer (dd/MM/YYYY)");
+    var emailCustomer=prompt("Enter email customer");
+    var addressCustomer=prompt("Enter Address Customer");
+    var typeCustomer=prompt("Enter Type Customer");
+    var discout=prompt("Enter Discout");
+    var numberOfAccompaning=prompt("Enter Number Of Accompanying");
+    var typeRoom=prompt("Enter Type Room");
+    var  rentDay=prompt("Enter Rent Day");
+    var TypeService=prompt("Enter Type Service");
+    var totalpays=500*(rentDay*1)*(1-discout)/100;
+alert(
+    "Information Of Customer:\n"+
+    "Name:" + nameCustomer +
+    "\n In Card:" +idCard+
+        "\n Birthday:" + birthdayCustomer+
+        "\n Email" +emailCustomer+
+        "\n Address" +addressCustomer+
+        "\n Type Customer"+ typeCustomer+
+        "\n Discount"+ discout+
+        "\n Accompanying" +numberOfAccompaning+
+        "\n Type Room" +typeRoom+
+        "\n Rent Day" +rentDay+
+        "\n Type Service"+TypeService+
+        "\n Total Pays" +totalpays
+)
+</script>
+
+</body>
+</html>

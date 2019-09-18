@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form>-->
+<!--    <tr>-->
+<!--        <td> </td>;-->
+<!--    </tr>-->
+<!--</form>-->
+<script>
+    var scout;
+    scout="<table border='1' width='300'>";
+    for (var i=2;i<10;i++){
+        scout=scout+"<tr>";
+        for ( var n=1;n<10;n++){
+            scout=scout+ "<td>"+n+"*"+i+"="+(n*i);
+        }
+        scout=scout+"</tr>";
+    }
+    scout=scout + "</table>";
+    document.write(scout);
+
+    // let sout;
+    // sout = "<table border='1' width='300'>"
+    // for (let i = 2; i < 10; i++) {
+    //     sout = sout + "<tr>";
+    //     for (let j = 1; j <= 10; j++) {
+    //         sout = sout + "<td>" + i+"*"+j+"="+i*j;
+    //     }
+    //     sout = sout + "</tr>";
+    // }
+    // sout = sout + "</table>";
+    // document.write(sout);
+</script>
+</body>
+</html>

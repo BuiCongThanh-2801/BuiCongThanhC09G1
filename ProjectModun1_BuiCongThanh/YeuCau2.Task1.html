@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var nameCustomer= "Bùi Công Thành";
+    var idCard="123456789";
+    var birthdayCustomer="28/01/1997";
+    var emailCustomer="thanhbui280197@gmail.com";
+    var addressCustomer="358/1 Phan Châu Trinh";
+    var typeCustomer="diamond";
+    var discout=10;
+    var numberOfAccompaning=2;
+    var typeRoom="business";
+    var  rentDay=10;
+    var TypeService="Villa";
+    var totalpays=500*(rentDay)*(1-discout)/100;
+    var choose=prompt(
+        "1. Show Information Customer.\n" +
+        "2. Edit Information Customer.\n" +
+        "3. Show The Amount To Be Paid After Discount.\n"
+    );
+    switch (choose) {
+        case "1":
+            alert(
+                "Information Of Customer:\n"+
+                "Name:" + nameCustomer +
+                "\n In Card:" +idCard+
+                "\n Birthday:" + birthdayCustomer+
+                "\n Email" +emailCustomer+
+                "\n Address" +addressCustomer+
+                "\n Type Customer"+ typeCustomer+
+                "\n Discount"+ discout+
+                "\n Accompanying" +numberOfAccompaning+
+                "\n Type Room" +typeRoom+
+                "\n Rent Day" +rentDay+
+                "\n Type Service"+TypeService
+            )
+            break;
+        case "2":
+            var chooseEdit=prompt("Choose Information Customer You Want Edit"+
+                    "Information Of Customer:\n"+
+                    "1.Name:" + nameCustomer +
+                    "\n2. In Card:" +idCard+
+                    "\n3. Birthday:" + birthdayCustomer+
+                    "\n4. Email" +emailCustomer+
+                    "\n5. Address" +addressCustomer+
+                    "\n6. Type Customer"+ typeCustomer+
+                    "\n7. Discount"+ discout+
+                    "\n8. Accompanying" +numberOfAccompaning+
+                    "\n9. Type Room" +typeRoom+
+                    "\n10. Rent Day" +rentDay+
+                    "\n11. Type Service"+TypeService
+            );
+            switch (chooseEdit) {
+                case "1":
+                    nameCustomer=prompt("Enter Name");
+                    break;
+                case "2":
+                    idCard=prompt("Enter IdCard");
+                    break;
+                case "3":
+                    birthdayCustomer=prompt("Enter Birthday");
+                    break;
+                case "4":
+                    emailCustomer=prompt("Enter Email");
+                    break;
+                case "5":
+                    addressCustomer=prompt("Enter Address");
+                    break;
+                case "6":
+                    typeCustomer=prompt("Enter Type Customer");
+                    break;
+                case "7":
+                    discout=prompt("Enter Discount");
+                    break;
+                case "8":
+                    numberOfAccompaning=prompt("Enter Number");
+                    break;
+                case "9":
+                    typeRoom=prompt("Enter Type Room");
+                    break;
+                case "10":
+                    rentDay=prompt("Enter Rent Day");
+                    break;
+                case "11":
+                    TypeService=prompt("Enter Type Service");
+                    break;
+                default:
+                    alert("Faill");
+                    break;
+
+
+            }
+
+
+        
+    }
+
+</script>
+
+</body>
+</html>
