@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // var i;
+    // var fib = []; // Initialize array!
+    // var cout=0;
+    // fib[0] = 0;
+    // fib[1] = 1;
+    // while (cout<2) {
+    //     for (i = 2; i <= 20; i++) {
+    //         // Next fibonacci number = previous + one before previous
+    //         // Translated to JavaScript:
+    //         fib[i] = fib[i - 2] + fib[i - 1];
+    //         if(fib[i]%5===0){
+    //             document.write("fib[i]");
+    //             cout++;
+    //         }
+    //     }
+    // }
+
+    let total;
+    let num = 0;
+    let a = 1;
+    let b = 0;
+    while (num < 2) {
+        total = a;
+        a = a + b;
+        b = total;
+        if (b%5===0) {
+            document.write(total);
+            num++;
+        }
+    }
+</script>
+
+
+</body>
+</html>
