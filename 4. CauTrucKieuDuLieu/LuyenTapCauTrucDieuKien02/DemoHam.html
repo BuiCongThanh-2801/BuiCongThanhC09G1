@@ -1,0 +1,85 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /**
+     * nhap vao cac phan ty cho mang soNguyen
+     * @param soNguyen
+     **/
+    function inputArray(soNguyen) {
+        //var soNguyen = new Array();
+        var dem =1;
+        do{
+            var input = parseInt(prompt("nhap vao so thu "+ dem));
+            soNguyen.push(input);
+            dem++;
+        }while (dem<6)
+    }
+    /**
+     * xuat mang
+     * @param soNguyen
+     * */
+    function inMang(soNguyen) {
+        for (var index in soNguyen){
+            document.write(soNguyen[index]+"<br>");
+        }
+    }
+    /**
+     *
+     * */
+    function tongMang(soNguyen) {
+        var tong = 0;
+        for (var index = 0; index<soNguyen.length; index++){
+            tong = tong + soNguyen[index];
+        }
+        return tong
+    }
+    /**
+     * Kiem tra so chan
+     * @param so
+     * */
+    function kiemTraSoChan(so) {
+        var kq = false;
+        if(so%2==0)
+            kq = true;
+        return kq;
+    }
+    function inMangChan(soNguyen) {
+        for (var index in soNguyen){
+            if(kiemTraSoChan(soNguyen[index]))
+                document.write(soNguyen[index]+"<br>");
+        }
+    }
+    var mangSo = new Array();
+    //su dung ham de nhap mang - doi so la 1 mang
+    inputArray(mangSo);
+    //su dung ham de xuat mang - doi so la 1 mang
+    inMang(mangSo);
+    //in tong tat ca cac phan tu cua mang
+    var sum = tongMang(mangSo);
+    document.write("tong tat ca cac ptu cua mang la"+sum+"<br/>");
+    //in cac phan tu la so chan co trong mang
+    document.write("cac phan tu so chan co trong mang la");
+    inMangChan(mangSo);
+    /*
+    su dung for - in de duyet mang
+     document.write("mang vua nhap la <br/>")
+       for (var index in soNguyen){
+           document.write(soNguyen[index]+"<br>");
+       }
+     su dung for loop de duyet mang
+     document.write("mang dao nguoc mang vua nhap la <br/>");
+     for(var index =soNguyen.length-1; index>=0; index--){
+        soNguyen[index]+1;
+     }
+    function sortArray(arrayName){
+     }*/
+</script>
+<body>
+<form>
+</form>
+</body>
+</html>

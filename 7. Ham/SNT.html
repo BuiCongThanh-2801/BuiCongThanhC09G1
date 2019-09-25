@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let num=parseInt(prompt("How many number you want : "));
+    let N=2;
+        while (num>=N){
+        let demUoc = 0;
+        for (let i = 1; i < N; i++) {
+            if (N % i === 0) demUoc++;
+        }
+
+        if (demUoc === 1) {
+            document.write(N + "</br> ");
+        }
+        N++;
+    }
+    //     var number=prompt("Nhap so nguyen to")*1;
+    //     var dem=0;
+    //     var i=2;
+    //     while(true){
+    //     if (i===2 ){
+    //     dem++;
+    //     document.write(i+"<br>");
+    //     i++;
+    //     continue;
+    //     }
+    //     if (checkSNT(i)){
+    //     document.write(i+"<br>");
+    //     dem++;
+    //     }
+    //     if (dem===number){
+    //     break;
+    //     }
+    //     i=i+2;
+    //     }
+    //     function checkSNT(val) {
+    //     for (let i=2;i<=Math.sqrt(val);i++){
+    //     if (val%i===0){
+    //
+    // return false;
+    // }
+    // }
+    // return true;
+
+    // }
+</SCRIPT>
+
+</body>
+</html>
