@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNameCustomer=[];
+    let choose=prompt("1. Add new customer."+
+    "\n 2. Delete customer.");
+    switch (choose) {
+        case "1":
+            let arrLength =  prompt("Enter the number of customer you want to add");
+            for (var i = 0; i< arrLength; i++){
+                arrNameCustomer.push(prompt("Enter  name customer no"+ (i+1)));
+            }
+            let result="";
+            for (var i=0; i<arrNameCustomer.length ; i++){
+                result+= "\n" + (i+1) + ". " + arrNameCustomer[i];
+            }
+            alert(result);
+            arrNameCustomer.sort();
+            result="";
+            for (var i=1;i< arrNameCustomer.length;i++){
+                result += "\n" +(i+1) +". " + arrNameCustomer[i]
+            }
+            alert(result);
+
+            break;
+        case "2":
+            arrNameCustomer[0]="Thái";
+            arrNameCustomer[1]="Hải";
+            arrNameCustomer[2]="Nam";
+            arrNameCustomer[3]="Linh";
+            arrNameCustomer[4]="Tùng";
+            arrNameCustomer[5]="Bảo";
+            arrNameCustomer[6]="An Lọ";
+            arrNameCustomer[7]="Quân";
+            arrNameCustomer[8]="Hùng";
+            arrNameCustomer[9]="Hưng";
+            var result ="";
+            for (var i=0; i< arrNameCustomer.length;i++){
+                result += "\n" +(i+1) + ". " + arrNameCustomer[i];
+            }
+            let  indexDelete = prompt("Choose customer you want to delete:" + result);
+            arrNameCustomer.splice(Number.parseInt(indexDelete)-1,1);
+            var resultAfterDelete= "";
+            for (var i=0; i< arrNameCustomer.length;i++){
+                resultAfterDelete += "\n" + (i+1) + "." + arrNameCustomer[i];
+            }
+            alert("List customer after delete" + resultAfterDelete);
+            break;
+        default:
+            alert("Fail !!!");
+            break;
+    }
+</script>
+
+</body>
+</html>

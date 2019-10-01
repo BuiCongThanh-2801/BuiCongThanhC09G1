@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form>-->
+<!--    <p>-->
+<!--        <input id="txt" type="text">-->
+<!--        <input type="button" onclick="TinhDienTich(this.value)" value="Tính Diện Tích">-->
+<!--    </p>-->
+<!--    <p>Diện Tích Hình Tròn Là:<span id="txt1"></span></p>-->
+<!--<br>-->
+<!--    <p>-->
+<!--        <input id="text" type="text">-->
+<!--        <input type="button" onclick="TinhChuVi(this.value)" value="Tính Chu Vi">-->
+<!--    </p>-->
+<!--    <p>Chu Vi Hình Tròn Là:<span id="text1"></span></p>-->
+<!--</form>-->
+<!--<script>-->
+<!--    var tinhS= document.getElementById(txt);-->
+<!--    function TinhDienTich(tinhS) {-->
+<!--        val=parseFloat(val);-->
+<!--        document.getElementById()-->
+
+<!--    }-->
+<!--</script>-->
+<script>
+    var R=parseFloat(prompt("Nhập R:"))
+    function TinhDienTich() {
+        var result;
+        result =R*R*3.14;
+        return result;
+    }
+
+    function TinhChuVi() {
+        var result;
+        result=2*R*3.14;
+        return result;
+    }
+var dientich = TinhDienTich();
+    alert("Diện tích hình tròn là " + dientich);
+    var chuvi=TinhChuVi();
+    alert("Chu vi hình tròn l " + chuvi);
+        
+
+</script>
+
+</body>
+</html>

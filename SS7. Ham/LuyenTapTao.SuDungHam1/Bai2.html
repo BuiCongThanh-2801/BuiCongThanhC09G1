@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="txt" type="text" oninput="Thaydoi(this.value)">
+    <p>Đối số xuất  <span id="txt2"></span></p>
+</form>
+<script>
+    function Thaydoi(val) {
+        val=parseFloat(val);
+        document.getElementById("txt2").innerHTML= val+1;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="chieudai">
+    <input type="text" id="chieurong">;
+    <input type="button" onclick="Tinhtoan()" value="Tính">;
+    <p id="result"></p>
+</form>
+<script type="text/javascript" src="TamGiac.js" ></script>
+<script>
+    let chieurong=document.getElementById("chieurong");
+    let chieudai= document.getElementById("chieudai");
+    let  result= "";
+    function Tinhtoan() {
+        let hcn=new HinhChuNhat();
+        hcn.setchieudai(chieudai.value*1);
+        hcn.setchieurong(chieurong.value*1);
+        result ="Chu Vi là :" + hcn.chuvi() + "Diện Tích là : " + hcn.dientich();
+        document.getElementById("result").innerText= result;
+
+    }
+
+</script>
+</body>
+</html>

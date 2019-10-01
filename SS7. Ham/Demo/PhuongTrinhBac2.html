@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="number1" placeholder="Nhập x">
+    <input type="text" id="number2" placeholder="Nhập y">
+    <input type="text" id="number3" placeholder="Nhập z">
+    <input type="button" onclick="Tinhtoan()" value="Tính Bậc 2">
+    <p id="result"></p>
+</form>
+<script type="text/javascript" src="PhuongTrinhBac2.2.js"></script>
+<script>
+    let numA = document.getElementById("number1");
+    let numB = document.getElementById("number2");
+    let numC = document.getElementById("number3");
+    let result = "";
+
+    function Tinhtoan() {
+        let deTal = new PhuongTrinhBac2();
+        deTal.setNumber1(numA.value*1);
+        deTal.setNumber2(numB.value*1);
+        deTal.setNumber3(numC.value*1);
+        if (numA.value * 1 === 0) {
+            if (numB.value * 1 === 0) {
+                if (numC.value *1 === 0) {
+                    result = "Phương Trình vô số nghiệm !!!";
+
+                } else {
+                    result = "Phương Trình vô nghiệm";
+
+                }
+            } else {
+                result = "Phương Trình có nghiệm" + deTal.txt();
+            }
+        } else {
+            if (deTal.Denta < 0) {
+                alert("Phương trình vô nghiệm:");
+            } else if (deTal.Denta === 0) {
+                result = "Phương trình có nghiệm kép x1 = x2 = " + deTal.x1();
+            }
+            if (deTal.Denta > 0) {
+                result = "Phương trình có 2 nghiệm x1= " + deTal.x1() + "</br>" +
+                    "x2=" + deTal.x2();
+            }
+            // deTal.setNumber1(number1.value*1);
+            // deTal.setNumber2(number2.value*1);
+            // deTal.setNumber3(number3.value*1);
+            // result=deTal.this.x1;
+            // result=deTal.this.x2;
+
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+
+</body>
+</html>
