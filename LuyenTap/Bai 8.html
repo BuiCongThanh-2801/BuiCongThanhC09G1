@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a =parseInt(prompt("Nhập số a"));
+    var b =parseInt(prompt("Nhập số b"));
+    // for (var i=1;i<a;i++){
+    //     if (a%i===0) {
+    //         var arr = [i];
+    //         if (b%arr===0){
+    //             document.write(arr[i])
+    //         }
+    //
+    //     }
+    // }
+    function UCLN(x,y) {
+        while (x!=y){
+            if(x>y){
+                x=x-y;
+            }
+            else {
+                y=y-x;
+            }
+        }
+        return x;
+    }
+    document.write("UCLN" + UCLN(a,b));
+    document.write("BCNN" + a*b/UCLN(a,b));
+</script>
+
+</body>
+</html>

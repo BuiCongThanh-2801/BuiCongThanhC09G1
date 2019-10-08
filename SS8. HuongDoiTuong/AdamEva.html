@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label> APPLE</label>
+    <input id="nhaptao" type="text">
+    <input type="button" onclick="Tinh()" value="Submit">
+    <br/>
+
+    <label> HUMAN</label>
+    <input id="ten" type="text" placeholder="Nhập Tên" >
+    <input id="nam" type="text" placeholder="Nhập giới tính">
+    <input id="cannang" type="text" placeholder="Nhập cân nặng">
+    <input type="button" onclick="clickrun()" value="Submit">
+    <input type="button" onclick="hienthi()" value="Display">
+
+    <label> EAT APPLE</label>
+    <input type="button" value="EAT">
+    <p><span id="text"></span></p>
+</form>
+<script>
+    var Apple=function () {
+        this.weight =function (weight) {
+            this.weight=weight;
+        };
+        this.getweight= function () {
+            return this.weight;
+        };
+        this.decrease=function () {
+            if (this.weight>0){
+                return this.weight--;
+            }
+        };
+
+
+    };
+    var Human=function () {
+        this.setName=function(name){
+            this.Name=name;
+        };
+        this.getName=function () {
+            return this.Name;
+        };
+        this.setWeight=function (weight) {
+            this.weight=weight;
+        };
+        this.getWeight=function () {
+            return this.weight;
+        };
+        this.setGender=function (gender) {
+            this.Gender=gender;
+        };
+        this.getGender=function () {
+            return this.Gender;
+        }
+        this.isMale=function (Male) {
+            return this.isMale;
+        };
+        this.setSay=function (say) {
+            this.say=say;
+        };
+        this.getSay=function () {
+            return this.say;
+        };
+        this.eat=function (eat) {
+            if (Apple.weight>0){
+                return this.getWeight+1;
+            }
+        };
+        this.checkApple=function () {
+            return Apple.weight-1;
+        }
+    };
+    let ten=document.getElementById("ten");
+    let cannang=document.getElementById("cannang");
+    let gioitinh=document.getElementById("nam");
+    let apple=document.getElementById("nhaptao");
+    let array = [];
+    let sp;
+    let ap;
+    let result;
+    function Tinh() {
+        ap = new Apple();
+        ap.weight(apple.value*10);
+        result=ap.getweight();
+        alert("Added")
+    }
+    function clickrun() {
+        sp = new Human();
+        sp.setName(ten.value);
+        sp.setGender(gioitinh.value);
+        sp.setWeight(cannang.value*1);
+        array.push(sp);
+        alert("Added");
+    }
+    function hienthi() {
+        result="";
+        for (var i=0;i<array.length;i++){
+            result+= "Tên: " + array[i].getName()+" Giới tính :" +array[i].getGender() +" Cân nặng :"+ array[i].getWeight()
+        }
+        alert(result)
+    }
+    function Tinhtoan() {
+
+    }
+        
+
+
+</script>
+
+</body>
+</html>
